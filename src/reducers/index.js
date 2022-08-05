@@ -1,9 +1,9 @@
-import {combinedReducers} from 'redux';
+import {combineReducers} from 'redux';
 import authUser from './authUser';
 import users from './users';
 import tweets from './tweets';
 
-export default combinedReducers({
+export default combineReducers({
     authUser,
     users,
     tweets
