@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Tweet from "./Tweets";
+import Tweet from "./Tweet";
 
 const Dashboard = (props) => {
     console.log(props);
