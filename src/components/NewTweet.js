@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { connect } from "react-redux";
+import { handleAddTweet } from "../actions/tweets";
 
 
-export const NewTweet = (() => {
+const NewTweet = (({dispatch, id}) => {
     const [text, setText] = useState("");
     const handleChange = (e) => {
         const text = e.target.value;
@@ -12,7 +14,8 @@ export const NewTweet = (() => {
     const handleSubmit = (e) => {
         e.preventDefault();
         //ADD TWEET TO STORE
-        // TODO:
+        dispatch(handleAddTweet(text, id));
+
         console.log("NEW TWEET: ", text);
         setText("");
     };
@@ -33,4 +36,6 @@ export const NewTweet = (() => {
             </form>
         </div>
     )
-})
+});
+
+export default connect()(NewTweet);
