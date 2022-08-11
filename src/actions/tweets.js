@@ -20,11 +20,11 @@ export function handleAddTweet(text, replyingTo) {
         return saveTweet({
             text,
             author: authUser,
-            replyingTo
+            replyingTo,
         })
-        .then((tweet) => dispatch(addTweet(tweet))
-        .then(() => dispatch(hideLoading())));
-    }
+        .then((tweet) => dispatch(addTweet(tweet)))
+        .then(() => dispatch(hideLoading()));
+    };
 }
 
 /**
