@@ -11,7 +11,7 @@ const App = (props) => {
   }, []);
   return <div>
     <LoadingBar/>
-      {props.loading === true ? null : <Dashboard/>}
+      {props.loading === true ? null : <NewTweet/>}
     </div>;
 };
 
